@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#3A2B80"/>
+      <stop offset="55%" stop-color="#241B52"/>
+      <stop offset="100%" stop-color="#151030"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- aperture rings -->
+  <g transform="translate(600,315)">
+    <circle r="270" fill="none" stroke="#6A55E3" stroke-width="1.5" opacity="0.28"/>
+    <circle r="225" fill="none" stroke="#8577EE" stroke-width="1.5" opacity="0.36"/>
+    <circle r="180" fill="none" stroke="#A9A2F6" stroke-width="1.5" opacity="0.44"/>
+    <circle r="135" fill="none" stroke="#A9A2F6" stroke-width="1.8" opacity="0.55"/>
+    <g stroke="#3DD9E8" stroke-width="2.4" opacity="0.85">
+      <line x1="135" y1="0" x2="171" y2="52"/>
+      <line x1="67.5" y1="116.9" x2="20" y2="167"/>
+      <line x1="-67.5" y1="116.9" x2="-125" y2="122"/>
+      <line x1="-135" y1="0" x2="-171" y2="-52"/>
+      <line x1="-67.5" y1="-116.9" x2="-20" y2="-167"/>
+      <line x1="67.5" y1="-116.9" x2="125" y2="-122"/>
+    </g>
+    <circle r="86" fill="#1A1240"/>
+    <path d="M0-86A86 86 0 0 1 74.5-43L0 0Z" fill="#3DD9E8" opacity="0.9"/>
+    <circle cx="30" cy="-42" r="14" fill="#FFFFFF" opacity="0.92"/>
+    <circle r="30" fill="#573FCB"/>
+  </g>
+
+  <!-- Latin wordmark only: librsvg resolves <text> against system fonts, so Korean
+       here would silently break in CI. Helvetica/Arial exist everywhere. -->
+  <text x="600" y="560" text-anchor="middle" font-family="Helvetica,Arial,sans-serif"
+        font-size="34" font-weight="700" letter-spacing="14" fill="#E8E5FA">EYEROUND</text>
+  <text x="600" y="596" text-anchor="middle" font-family="Helvetica,Arial,sans-serif"
+        font-size="15" font-weight="400" letter-spacing="6" fill="#A9A2F6">KOREA EYE CLINIC DATA</text>
+</svg>

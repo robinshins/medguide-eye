@@ -1,0 +1,10 @@
+<svg width="208" height="208" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+  <rect width="208" height="208" rx="28" fill="#F1F0FE"/>
+  <rect x="5" y="5" width="198" height="198" rx="24" fill="#FFFFFF" stroke="#CBC7FB" stroke-width="2"/>
+  <circle cx="104" cy="86" r="46" fill="none" stroke="#A9A2F6" stroke-width="3"/>
+  <circle cx="104" cy="86" r="56" fill="none" stroke="#CBC7FB" stroke-width="1.5"/>
+  <text x="104" y="107" text-anchor="middle" font-family="Helvetica,Arial,sans-serif"
+        font-size="60" font-weight="700" fill="#573FCB">3</text>
+  <text x="104" y="170" text-anchor="middle" font-family="Helvetica,Arial,sans-serif"
+        font-size="17" font-weight="600" letter-spacing="5" fill="#8577EE">RANK</text>
+</svg>
