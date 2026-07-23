@@ -3,10 +3,19 @@ import { SITE } from '@/lib/site.config';
 import { getAllArticleSlugs } from '@/lib/articles';
 import { getAllBlogPosts } from '@/lib/blog';
 
-// 1h ISR floor. scripts/publish.ts also POSTs /api/revalidate?tag=articles right after
-// each publish, and revalidateTag('articles') purges this route's cache too — so a new
-// article normally lands in the sitemap within seconds, not an hour.
-export const revalidate = 3600;
+// Rendered per request — NOT cached at the route level.
+//
+// Verified against production: neither revalidateTag('articles') nor
+// revalidatePath('/sitemap.xml') purges a metadata route's cache, so with
+// `export const revalidate = N` this file kept serving a stale URL set for up to N
+// seconds after a publish while the home page updated instantly. Search engines
+// discovering new articles late is the one thing this file exists to prevent.
+//
+// The cost of force-dynamic is bounded: getAllArticleSlugs() is still wrapped in
+// unstable_cache tagged 'articles', so Firestore is only read again after a publish
+// purges that tag. Every other request re-renders from cached data — cheap string
+// formatting, no database round trip.
+export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || `https://${SITE.domain}`;
