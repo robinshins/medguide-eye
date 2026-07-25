@@ -18,8 +18,6 @@ export const SITE: SiteConfig = {
   siteDescription:
     '전국 안과를 네이버·카카오·구글 리뷰와 건강보험심사평가원 전문의 정보로 교차 분석했습니다. 라식, 라섹, 스마일라식, 렌즈삽입술, 백내장까지 지역별로 정리했습니다.',
   trustBadge: '리뷰 3개 플랫폼 교차검증',
-  domain: 'eyeround.co.kr',
-  contactEmail: 'nosun3946@gmail.com',
   // 5개 사이트가 같은 키를 쓴다. IndexNow는 키 공유를 허용하며, 각 도메인 루트에
   // <키>.txt만 있으면 된다(public 오버레이로 배치). 다만 제출은 도메인별로 따로
   // 해야 한다 — 요청의 host는 하나이고 urlList가 전부 그 host여야 하기 때문이다.

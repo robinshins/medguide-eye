@@ -2,6 +2,7 @@
 // 시력교정 비교 매트릭스 테이블, 중앙선 타임라인, 대형 숫자 아티클 카드.
 // 다른 사이트와 레이아웃 구조 자체가 다르다: 타일 그리드 없음, 방사형 메뉴가 내비게이션.
 import Link from 'next/link';
+import { getBaseUrl } from '@/lib/site-url';
 import { SITE } from '@/lib/site.config';
 import { getLatestArticles } from '@/lib/articles';
 import { ApertureRings } from '@/app/components/decor/ApertureRings';
@@ -9,7 +10,7 @@ import { SpecialtyIcon } from '@/app/components/icons';
 
 export const revalidate = 21600;
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || `https://${SITE.domain}`;
+const baseUrl = getBaseUrl();
 
 // 방사형 메뉴에 올릴 8개 (나머지는 하단 리스트로)
 const RADIAL = ['lasik', 'lasek', 'smile-lasik', 'icl', 'cataract', 'presbyopia', 'glaucoma', 'dry-eye'];
