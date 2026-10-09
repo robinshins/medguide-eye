@@ -11,6 +11,7 @@ import type { SiteConfig } from './site.types';
 // weight contrast. See medguide-core/BRAND.md.
 export const SITE: SiteConfig = {
   key: 'eye',
+  gaId: 'G-GLB1MQFGDR',
 
   categoryKo: '안과',
   siteName: '아이라운드',
